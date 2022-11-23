@@ -30,7 +30,7 @@ public class Owner {
 	joinColumns = @JoinColumn(name="owner_id"),
 	inverseJoinColumns = @JoinColumn(name="property_id"))
 	private List<Property> propertyList;
-	private String[] roles;
+	private String role;
 	private String[] authorities;
 	
 	public Owner() {
@@ -39,14 +39,14 @@ public class Owner {
 	
 	
 	public Owner(Long id, String firstName, String lastName, String email, String password, List<Property> propertyList,
-			String[] roles, String[] authorities) {
+			String role, String[] authorities) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
 		this.propertyList = propertyList;
-		this.roles = roles;
+		this.role = role;
 		this.authorities = authorities;
 	}
 
